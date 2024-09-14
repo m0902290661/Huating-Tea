@@ -1,0 +1,13 @@
+.body{
+    margin: 15px;
+    border: 0.5px black solid;
+    border-radius: 15px;
+    padding: 15px;
+}
+.header{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 50px;
+    background-image: url('0.webp');
+    background-size: cover;
+}
