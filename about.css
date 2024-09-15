@@ -11,3 +11,10 @@
     background-image: url('0.webp');
     background-size: cover;
 }
+/*  */
+@media screen and (max-width:768px) {
+    .header p,.header h1{
+        background-color: white;
+        width: 200px;
+    }
+}
