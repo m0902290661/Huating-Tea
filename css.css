@@ -1,0 +1,76 @@
+body{
+    margin: 5px;
+    padding: 5px;
+}
+.header{
+    padding: 100px 0px 100px 0px;
+    text-align: center;
+}
+.header p{
+    color: rgb(9, 109, 9);
+}
+.main img{
+    height: 300px;
+    border-radius: 15px;
+}
+button{
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: greenyellow;
+}
+.main{
+    margin: 0 0 0 50px;
+}
+.main p{
+    width: 65%;
+    margin: 15px;
+}
+.block{
+    height: 150px;
+    display: block;
+}
+.main h2{
+    text-align: right;
+    text-decoration: underline;
+}
+summary{
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+}
+.mm{
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+}
+.m{
+    margin: 15px;
+}
+.id2s{
+    display: flex;
+}
+@media (max-width:768px) {
+    .main p{
+        width: auto;
+    }
+    .main img{
+        height: 200px;
+    }
+    .main{
+        margin: 5px;
+    }
+    .mm{
+        display: block;
+    }
+    .id2s{
+        display: block;
+    }
+}
