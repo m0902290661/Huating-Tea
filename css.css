@@ -29,7 +29,7 @@ button:hover{
     margin: 0 0 0 50px;
 }
 .main p{
-    width: 65%;
+    width: 55%;
     margin: 15px;
 }
 .block{
@@ -54,8 +54,15 @@ summary{
 .m{
     margin: 15px;
 }
-.id2s{
+.id2s {
     display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-between;
+}
+
+.mg {
+    width: calc(50%); /* 三欄式布局 */
+    margin-right: 10px;
 }
 @media (max-width:768px) {
     .main p{
@@ -68,9 +75,6 @@ summary{
         margin: 5px;
     }
     .mm{
-        display: block;
-    }
-    .id2s{
         display: block;
     }
 }
