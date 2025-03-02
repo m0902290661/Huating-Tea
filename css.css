@@ -56,14 +56,14 @@ summary{
     margin: 15px;
 }
 textarea{
-    height: 300px;
+    height: 500px;
     border: 0;
     border-radius: 15px;
-    width: 50%;
+    width: auto;
     resize: none;
 }
 iframe{
-    height: 300px;
+    height: 500px;
     border-radius: 15px;
     border: 0 solid;
 }
@@ -93,11 +93,6 @@ iframe{
     .main{
         margin: 5px;
     }
-    .mm{
-        display: block;
-    }
-}
-@media (max-width:1000px) {
     .mm{
         display: block;
     }
