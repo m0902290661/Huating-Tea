@@ -21,6 +21,7 @@ button{
     border-radius: 20px;
     padding: 15px;
     cursor: pointer;
+    color: black;
 }
 button:hover{
     background-color: greenyellow;
@@ -54,15 +55,33 @@ summary{
 .m{
     margin: 15px;
 }
-.id2s {
-    display: flex;
-    flex-wrap:wrap; 
-    justify-content: space-between;
+textarea{
+    height: 300px;
+    border: 0;
+    border-radius: 15px;
+    width: 50%;
+    resize: none;
 }
-
-.mg {
-    width: calc(50%); /* 三欄式布局 */
-    margin-right: 10px;
+iframe{
+    height: 300px;
+    border-radius: 15px;
+    border: 0 solid;
+}
+.histroy{
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+}
+.histroy div{
+    margin: 15px;
+}
+.id2s{
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+}
+.mg{
+    margin: 15px;
 }
 @media (max-width:768px) {
     .main p{
@@ -74,6 +93,11 @@ summary{
     .main{
         margin: 5px;
     }
+    .mm{
+        display: block;
+    }
+}
+@media (max-width:1000px) {
     .mm{
         display: block;
     }
