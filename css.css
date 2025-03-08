@@ -83,6 +83,11 @@ iframe{
 .mg{
     margin: 15px;
 }
+.m iframe{
+    height: 0;
+    width: auto;
+    margin: 0px;
+}
 @media (max-width:768px) {
     .main p{
         width: auto;
@@ -92,9 +97,6 @@ iframe{
     }
     .main{
         margin: 5px;
-    }
-    .mm{
-        display: block;
     }
     .htit{
         display: block;
