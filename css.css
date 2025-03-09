@@ -177,7 +177,7 @@ body {
 }
 
 .thumbnails img {
-    width: 60px;
+    width: 30px;
     height: 40px;
     margin: 5px;
     cursor: pointer;
@@ -205,5 +205,8 @@ body {
 
     .htit {
         display: block;
+    }
+    .thumbnails img{
+        height: 20px;
     }
 }
