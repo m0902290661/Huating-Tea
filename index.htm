@@ -25,8 +25,20 @@
         </details>
     </div>
     <div class="main">
-        <h2>重要公告 Important post</h2>
-        <p>暫無公告</p>
+        <div class="carousel">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <img src="img5.png" class="active">
+            <img src="img6.png">
+            <img src="img7.png">
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+        <!-- 縮圖導航 -->
+        <div class="thumbnails">
+            <img src="img5.png" onclick="jumpToSlide(0)" class="active">
+            <img src="img6.png" onclick="jumpToSlide(1)">
+            <img src="img7.png" onclick="jumpToSlide(2)">
+        </div>
 
         <span class="block"></span>
 
@@ -160,6 +172,8 @@
     <div class="footer">
         <p>Copyright &copy; 2025 <a href="https://dafuntea.com">華庭茶葉有限公司</a> 本站由 許元洧 製作、設計、維護 All right reserved.</p>
     </div>
+
+    <script src="js.js"></script>
 </body>
 
 </html>

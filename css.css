@@ -1,19 +1,23 @@
-body{
+body {
     margin: 5px;
     padding: 5px;
 }
-.header{
+
+.header {
     padding: 100px 0px 100px 0px;
     text-align: center;
 }
-.header p{
+
+.header p {
     color: rgb(9, 109, 9);
 }
-.main img{
+
+.main img {
     height: 300px;
     border-radius: 15px;
 }
-button{
+
+button {
     text-decoration: none;
     text-align: center;
     background-color: white;
@@ -23,82 +27,174 @@ button{
     cursor: pointer;
     color: black;
 }
-button:hover{
+
+button:hover {
     background-color: greenyellow;
 }
-.main{
+
+.main {
     margin: 0 0 0 50px;
 }
-.main p{
+
+.main p {
     width: 55%;
     margin: 15px;
 }
-.block{
+
+.block {
     height: 150px;
     display: block;
 }
-.main h2{
+
+.main h2 {
     text-align: right;
     text-decoration: underline;
 }
-summary{
+
+summary {
     cursor: pointer;
 }
-.footer{
+
+.footer {
     text-align: center;
 }
-.mm{
+
+.mm {
     display: flex;
     max-width: 100%;
     overflow: auto;
 }
-.m{
+
+.m {
     margin: 15px;
 }
-textarea{
+
+textarea {
     height: 300px;
     border: 0;
     border-radius: 15px;
     width: auto;
     resize: none;
 }
-iframe{
+
+iframe {
     height: 300px;
     border-radius: 15px;
     border: 0 solid;
 }
-.histroy{
+
+.histroy {
     display: flex;
     max-width: 100%;
     overflow: auto;
 }
-.histroy div{
+
+.histroy div {
     margin: 15px;
 }
-.id2s{
+
+.id2s {
     display: flex;
     max-width: 100%;
     overflow: auto;
 }
-.mg{
+
+.mg {
     margin: 15px;
 }
-.m iframe{
+
+.m iframe {
     height: 0;
     width: auto;
     margin: 0px;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* 縮圖區塊 */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.thumbnails img.active {
+    opacity: 1;
+    border: 2px solid #333;
+}
+
 @media (max-width:768px) {
-    .main p{
+    .main p {
         width: auto;
     }
-    .main img{
+
+    .main img {
         height: 200px;
     }
-    .main{
+
+    .main {
         margin: 5px;
     }
-    .htit{
+
+    .htit {
         display: block;
     }
 }
