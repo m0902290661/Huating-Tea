@@ -11,19 +11,23 @@
 
 <body>
     <div class="header">
-        <h1><img src="logo.png" style="border-radius: 15px; height: 32px;"> 華庭茶葉有限公司<span
-                style="font-size: 24px;" class="htit">官方二站</span></h1>
-        <p>經典茶韻</p>
-        <details>
-            <summary>網站導覽</summary>
-            <div>
-                <li><a href="#d1">關於我們</a></li>
-                <li><a href="#d2">商品體系</a></li>
-                <li><a href="#d3">據點分佈</a></li>
-                <li><a href="#d4">歷史活動</a></li>
-            </div>
-        </details>
+        <div>
+            <h1><img src="logo.png" style="border-radius: 15px; height: 32px;"> 華庭茶葉有限公司</h1>
+            <p>經典茶韻</p>
+        </div>
+        <div class="header2">
+            <details>
+                <summary>網站導覽</summary>
+                <div>
+                    <li><a href="#d1">關於我們</a></li>
+                    <li><a href="#d2">商品體系</a></li>
+                    <li><a href="#d3">據點分佈</a></li>
+                    <li><a href="#d4">歷史活動</a></li>
+                </div>
+            </details>
+        </div>
     </div>
+    <span class="block"></span>
     <div class="main">
         <div class="carousel">
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
@@ -32,7 +36,7 @@
             <img src="img7.png">
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
-        
+
         <!-- 縮圖導航 -->
         <div class="thumbnails">
             <img src="img5.png" onclick="jumpToSlide(0)" class="active">

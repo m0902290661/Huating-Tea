@@ -4,8 +4,17 @@ body {
 }
 
 .header {
-    padding: 100px 0px 100px 0px;
-    text-align: center;
+    padding: 15px;
+    border-bottom: 0.5px solid;
+    margin-bottom: 15px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    margin-top: 0px;
+}
+
+.header2{
+    text-align: right;
 }
 
 .header p {
