@@ -28,21 +28,20 @@
         </div>
     </div>
     <span class="block"></span>
-    <div class="main">
-        <div class="carousel">
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <img src="img5.png" class="active">
-            <img src="img6.png">
-            <img src="img7.png">
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-        </div>
 
-        <!-- 縮圖導航 -->
-        <div class="thumbnails">
-            <img src="img5.png" onclick="jumpToSlide(0)" class="active">
-            <img src="img6.png" onclick="jumpToSlide(1)">
-            <img src="img7.png" onclick="jumpToSlide(2)">
+    <div class="showimg">
+        <div class="si1">
+            <img src="img5.png" class="simg" id="i1"></img>
+            <img src="img6.png" class="simg" id="i2"></img>
+            <img src="img7.png" class="simg" id="i3"></img>
         </div>
+        <div class="si2">
+            <div class="sib" id="b1"></div>
+            <div class="sib" id="b2"></div>
+            <div class="sib" id="b3"></div>
+        </div>
+    </div>
+    <div class="main">
 
         <span class="block"></span>
 
@@ -182,7 +181,27 @@
         <p>Copyright &copy; 2025 <a href="https://dafuntea.com">華庭茶葉有限公司</a> 本站由 許元洧 製作、設計、維護 All right reserved.</p>
     </div>
 
-    <script src="js.js"></script>
+    <script>
+        turnimg();
+        function turnimg() {
+            let q = 3;
+            let i = 1;
+            function showimg() {
+                if (i > q) {
+                    i = 1;
+                }
+                let imgs = 'i' + i;
+                let choices = 'b' + i;
+                document.querySelectorAll('.simg').forEach(img1 => img1.style.display = 'none');
+                document.getElementById(imgs).style.display = 'block';
+                document.querySelectorAll('.sib').forEach(img2 => img2.style.backgroundColor = 'white');
+                document.getElementById(choices).style.backgroundColor = 'gray';
+                i++;
+                setTimeout(showimg, 5000);
+            }
+            showimg();
+        }
+    </script>
 </body>
 
 </html>

@@ -4,17 +4,17 @@ body {
 }
 
 .header {
-    padding: 15px;
+    padding: 0;
     border-bottom: 0.5px solid;
-    margin-bottom: 15px;
     position: fixed;
     width: 100%;
     background-color: white;
-    margin-top: 0px;
+    margin: 0;
 }
 
 .header2{
     text-align: right;
+    margin-right: 15px;
 }
 
 .header p {
@@ -118,76 +118,25 @@ iframe {
     margin: 0px;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.sib{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin: 5px;
 }
 
-body {
-    font-family: Arial, sans-serif;
+.si1{
+    text-align: center;
 }
 
-.carousel {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.carousel img {
-    width: 100%;
-    display: none;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel img.active {
-    display: block;
-    opacity: 1;
-}
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* 縮圖區塊 */
-.thumbnails {
+.si2{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 
-.thumbnails img {
-    width: 30px;
-    height: 40px;
-    margin: 5px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-}
-
-.thumbnails img.active {
-    opacity: 1;
-    border: 2px solid #333;
+.simg{
+    width: 100%;
 }
 
 @media (max-width:768px) {
@@ -205,8 +154,5 @@ body {
 
     .htit {
         display: block;
-    }
-    .thumbnails img{
-        height: 20px;
     }
 }
