@@ -36,9 +36,9 @@
             <img src="img7.png" class="simg" id="i3"></img>
         </div>
         <div class="si2">
-            <div class="sib" id="b1"></div>
-            <div class="sib" id="b2"></div>
-            <div class="sib" id="b3"></div>
+            <div class="sib" id="b1" onclick="changimg(1)">1</div>
+            <div class="sib" id="b2" onclick="changimg(2)">2</div>
+            <div class="sib" id="b3" onclick="changimg(3)">3</div>
         </div>
     </div>
     <div class="main">
@@ -181,27 +181,7 @@
         <p>Copyright &copy; 2025 <a href="https://dafuntea.com">華庭茶葉有限公司</a> 本站由 許元洧 製作、設計、維護 All right reserved.</p>
     </div>
 
-    <script>
-        turnimg();
-        function turnimg() {
-            let q = 3;
-            let i = 1;
-            function showimg() {
-                if (i > q) {
-                    i = 1;
-                }
-                let imgs = 'i' + i;
-                let choices = 'b' + i;
-                document.querySelectorAll('.simg').forEach(img1 => img1.style.display = 'none');
-                document.getElementById(imgs).style.display = 'block';
-                document.querySelectorAll('.sib').forEach(img2 => img2.style.backgroundColor = 'white');
-                document.getElementById(choices).style.backgroundColor = 'gray';
-                i++;
-                setTimeout(showimg, 5000);
-            }
-            showimg();
-        }
-    </script>
+    <script src="js.js"></script>
 </body>
 
 </html>
