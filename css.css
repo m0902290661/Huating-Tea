@@ -6,13 +6,12 @@ body {
 .header {
     padding: 0;
     border-bottom: 0.5px solid;
-    position: fixed;
     width: 100%;
     background-color: white;
     margin: 0;
 }
 
-.header2{
+.header2 {
     text-align: right;
     margin-right: 15px;
 }
@@ -92,16 +91,6 @@ iframe {
     border: 0 solid;
 }
 
-.histroy {
-    display: flex;
-    max-width: 100%;
-    overflow: auto;
-}
-
-.histroy div {
-    margin: 15px;
-}
-
 .id2s {
     display: flex;
     max-width: 100%;
@@ -118,7 +107,7 @@ iframe {
     margin: 0px;
 }
 
-.sib{
+.sib {
     width: 20px;
     height: 20px;
     border: 1px solid;
@@ -128,21 +117,43 @@ iframe {
     text-align: center;
 }
 
-.si1{
+.si1 {
     text-align: center;
 }
 
-.si2{
+.si2 {
     display: flex;
     justify-content: center;
 }
 
-.simg{
+.simg {
     width: 100%;
 }
 
-.histroy div img{
+.histroy img {
     height: 200px;
+}
+.histroy{
+    max-width: 100%;
+    overflow: auto;
+}
+.histroy tr{
+    margin: 5px;
+    padding: 5px;
+}
+.histroy td{
+    vertical-align: top;
+    margin: 15px;
+    width: auto;
+    border-radius: 15px;
+}
+.histroy td p{
+    width: auto;
+    margin: 0;
+}
+.histroy td img{
+    width: auto;
+    margin: 0;
 }
 
 @media (max-width:768px) {
