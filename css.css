@@ -141,6 +141,10 @@ iframe {
     width: 100%;
 }
 
+.histroy div img{
+    height: 200px;
+}
+
 @media (max-width:768px) {
     .main p {
         width: auto;
