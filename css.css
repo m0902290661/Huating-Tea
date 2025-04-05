@@ -91,20 +91,19 @@ iframe {
     border: 0 solid;
 }
 
-.id2s {
-    display: flex;
-    max-width: 100%;
-    overflow: auto;
-}
-
 .mg {
     margin: 15px;
 }
 
-.m iframe {
-    height: 0;
-    width: auto;
-    margin: 0px;
+.mg table {
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.mg td {
+    vertical-align: top;
 }
 
 .sib {
@@ -130,28 +129,38 @@ iframe {
     width: 100%;
 }
 
+.histroy iframe {
+    height: 200px;
+    width: auto;
+}
+
 .histroy img {
     height: 200px;
 }
-.histroy{
+
+.histroy {
     max-width: 100%;
     overflow: auto;
 }
-.histroy tr{
+
+.histroy tr {
     margin: 5px;
     padding: 5px;
 }
-.histroy td{
+
+.histroy td {
     vertical-align: top;
     margin: 15px;
     width: auto;
     border-radius: 15px;
 }
-.histroy td p{
+
+.histroy td p {
     width: auto;
     margin: 0;
 }
-.histroy td img{
+
+.histroy td img {
     width: auto;
     margin: 0;
 }
