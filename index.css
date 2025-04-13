@@ -1,0 +1,120 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid green;
+    cursor: pointer;
+}
+
+a:hover {
+    border-top: 1px solid greenyellow;
+}
+
+summary {
+    color: white;
+    cursor: pointer;
+    border-top: 1px solid green;
+    display: inline;
+}
+
+summary:hover {
+    border-top: 1px solid greenyellow;
+}
+
+.header {
+    text-align: center;
+}
+
+.header img {
+    height: 32px;
+    border-radius: 15px;
+}
+
+.header h1 {
+    font-size: 34px;
+}
+
+.header p {
+    color: greenyellow;
+}
+
+.menu {
+    padding: 5px;
+}
+
+.menu a {
+    margin: 5px;
+}
+
+.video video {
+    width: 100%;
+}
+
+.video p {
+    text-align: right;
+}
+
+img {
+    height: 200px;
+    border-radius: 5px;
+}
+
+#main_2 p,
+#main_2 img,
+#main_2 li,
+#main_2 a {
+    margin-left: 15%;
+}
+
+#main_3 td,
+#main_4 td,
+#main_5 td {
+    vertical-align: top;
+    text-align: center;
+}
+
+.m5_t {
+    max-width: 100%;
+    overflow: auto;
+}
+
+#main_1 td {
+    vertical-align: top;
+    background-color: green;
+}
+
+#main_1 td:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+#main_2,
+#main_3,
+#main_4,
+#main_5 {
+    display: none;
+}
+
+#main_2:target,
+#main_3:target,
+#main_4:target,
+#main_5:target,
+#main_1 {
+    display: block;
+    animation: a1 1s;
+}
+
+@keyframes a1 {
+    0% {
+        padding: 100px;
+    }
+
+    100% {
+        padding: 15px;
+    }
+}
