@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="logo.png" type="png/x-icon">
+    <link rel="stylesheet" href="stor.css">
+    <title>華庭茶葉 商品目錄</title>
+</head>
+<body>
+<!--彈出視窗-->
+<div class="main1_1_0">
+    <div id="m1" class="main1_1">
+        <p class="main1_1x" onclick="main1_1c(1)">&times;</p>
+        <h2>樣式文字</h2>
+        <p>樣式文字1</p>
+    </div>
+    <div id="m2" class="main1_1">
+        <p class="main1_1x" onclick="main1_1c(2)">&times;</p>
+        <h2>樣式文字</h2>
+        <p>樣式文字2</p>
+    </div>
+    <div id="m3" class="main1_1">
+        <p class="main1_1x" onclick="main1_1c(3)">&times;</p>
+        <h2>樣式文字</h2>
+        <p>樣式文字3</p>
+    </div>
+
+    <div class="black" id="black"></div>
+</div>
+
+<div class="header">
+    <div class="logo">
+        <h1><img src="logo.png">華庭茶葉 商品目錄</h1>
+    </div>
+</div>
+<div class="nav">
+    <h2>精選商品</h2>
+    <div class="nav1">
+        <div class="nav0">
+            <img src="樣片.jpeg" alt="">
+            <p>樣式文字</p>
+        </div>
+        <div class="nav0">
+            <img src="樣片.jpeg" alt="">
+            <p>樣式文字</p>
+        </div>
+        <div class="nav0">
+            <img src="樣片.jpeg" alt="">
+            <p>樣式文字</p>
+        </div>
+    </div>
+    <div class="nav1">
+        <h2>商品分類</h2>
+        <div class="nav0">
+            <img src="樣片.jpeg" alt="">
+            <p>茶具</p>
+        </div>
+        <div class="nav0">
+            <img src="樣片.jpeg" alt="">
+            <p>茶葉</p>
+        </div>
+    </div>
+</div>
+
+<div id="main1" class="main1">
+    <h2>全部商品</h2>
+    <div class="main0">
+        <img src="樣片.jpeg" alt="">
+        <p>樣式文字</p>
+        <a onclick="main1_1(1)">詳細資訊</a>
+        <p>$NT XX</p>
+        <button>購買渠道（蝦皮）</button>
+    </div>
+    <div class="main0">
+        <img src="樣片.jpeg" alt="">
+        <p>樣式文字</p>
+        <a onclick="main1_1(2)">詳細資訊</a>
+        <p>$NT XX</p>
+        <button>購買渠道（蝦皮）</button>
+    </div>
+    <div class="main0">
+        <img src="樣片.jpeg" alt="">
+        <p>樣式文字</p>
+        <a onclick="main1_1(3)">詳細資訊</a>
+        <p>$NT XX</p>
+        <button>購買渠道（蝦皮）</button>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <a href="index.htm">華庭茶葉首頁</a>
+    <p>&copy;華庭茶葉 本站由許元洧設計</p>
+</div>
+
+<script>
+    function main1_1(i) {
+        let number = 'm' + String(i);
+        console.log(number);
+        document.getElementById(number).style.display = 'block';
+        document.getElementById('black').style.display = 'block';
+    }
+    function main1_1c(i) {
+        let number = 'm' + String(i);
+        document.getElementById(number).style.display = 'none';
+        document.getElementById('black').style.display = 'none';
+    }
+    window.onload = function (){
+        alert('本區尚未完成');
+    }
+</script>
+
+</body>
+</html>
