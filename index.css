@@ -59,6 +59,11 @@ summary:hover {
     text-align: right;
 }
 
+.important img{
+    text-align: center;
+    height: auto;
+}
+
 img {
     height: 200px;
     border-radius: 5px;
