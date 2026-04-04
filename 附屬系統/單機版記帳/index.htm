@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>華庭茶葉附屬系統 ｜ 單機版記帳簿</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="logo.png">
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .btns button {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            color: white;
+            background: #ff4d4d;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .edit-btn {
+            color: white;
+            background: #4CAF50;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><img src="logo.png" style="height: 24px;border-radius: 15px;" alt="">華庭茶葉附屬系統 ｜ 單機版記帳簿</h2>
+
+    <div>
+        <input type="text" id="itemName" placeholder="內容">
+        <input type="number" id="itemPrice" placeholder="金額">
+        <button onclick="addItem()">新增</button>
+    </div>
+
+    <hr>
+    <div id="list"></div>
+
+    <hr>
+    <button style="color: red;" onclick="deletall()">刪除所有記帳項目</button>
+
+    <script>
+        // 初始化資料
+        let records = JSON.parse(localStorage.getItem('myExpenses')) || [];
+        render();
+
+        // 【新增】
+        function addItem() {
+            const name = document.getElementById('itemName').value;
+            const price = document.getElementById('itemPrice').value;
+
+            if (name && price) {
+                const newRecord = {
+                    id: Date.now(), // 產生唯一 ID
+                    name: name,
+                    price: price
+                };
+                records.push(newRecord);
+                saveAndRender();
+
+                document.getElementById('itemName').value = '';
+                document.getElementById('itemPrice').value = '';
+            }
+        }
+
+        // 【單筆刪除】
+        function deleteItem(id) {
+            if (confirm('確定要刪除這筆帳目嗎？')) {
+                // 過濾掉符合該 id 的項目
+                records = records.filter(item => item.id !== id);
+                saveAndRender();
+            }
+        }
+
+        // 【編輯功能】
+        function editItem(id) {
+            // 找到該筆資料
+            const item = records.find(item => item.id === id);
+
+            // 簡單使用 prompt 進行修改 (實務上建議用彈窗表單)
+            const newName = prompt("修改項目名稱", item.name);
+            const newPrice = prompt("修改金額", item.price);
+
+            if (newName !== null && newPrice !== null) {
+                item.name = newName;
+                item.price = newPrice;
+                saveAndRender();
+            }
+        }
+
+        // 統一處理 儲存 + 渲染
+        function saveAndRender() {
+            localStorage.setItem('myExpenses', JSON.stringify(records));
+            render();
+        }
+
+        // 渲染畫面
+        function render() {
+            const listDiv = document.getElementById('list');
+            if (records.length === 0) {
+                listDiv.innerHTML = '<p>目前沒有紀錄</p>';
+                return;
+            }
+
+            listDiv.innerHTML = records.map(item => `
+                <div class="item">
+                    <span><strong>${item.name}</strong>: $${item.price}</span>
+                    <div class="btns">
+                        <button class="edit-btn" onclick="editItem(${item.id})">編輯</button>
+                        <button class="delete-btn" onclick="deleteItem(${item.id})">刪除</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function deletall(){
+            if(confirm('確定刪除所有紀錄？（無法復原）')){
+                if(prompt('請輸入「確定」來確定：')==='確定'){
+                    localStorage.clear();
+                    alert('已刪除');
+                    location.reload();
+                    return;
+                }
+            }
+            alert('刪除進程已取消')
+        }
+    </script>
+</body>
+
+</html>
